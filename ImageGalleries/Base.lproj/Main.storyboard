@@ -56,6 +56,12 @@
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="nEC-7w-vjU"/>
                                 </connections>
                             </scrollView>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="FyJ-FW-Lfp">
+                                <rect key="frame" x="280" y="555" width="39" height="37"/>
+                                <animations/>
+                                <color key="pageIndicatorTintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="currentPageIndicatorTintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                            </pageControl>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -65,14 +71,17 @@
                             <constraint firstItem="DQN-yB-KK0" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" priority="750" id="DVy-rU-gje"/>
                             <constraint firstItem="f9Z-rN-MR9" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" id="G4K-tT-WU7"/>
                             <constraint firstItem="3T1-1W-ha4" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" priority="750" id="Gak-U4-jFf"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="FyJ-FW-Lfp" secondAttribute="bottom" constant="8" symbolic="YES" id="IPT-9J-CbG"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="ghd-Th-muc" secondAttribute="bottom" id="Ktd-7w-Dxu"/>
                             <constraint firstItem="ghd-Th-muc" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="rlR-HD-PcK"/>
                             <constraint firstItem="DQN-yB-KK0" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" id="sGz-KC-fhC"/>
                             <constraint firstItem="3T1-1W-ha4" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" id="tdI-V9-dAK"/>
+                            <constraint firstItem="FyJ-FW-Lfp" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="vyi-Zr-Xy2"/>
                             <constraint firstAttribute="trailing" secondItem="ghd-Th-muc" secondAttribute="trailing" id="xr2-cP-eab"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="pageControl" destination="FyJ-FW-Lfp" id="SZY-Zr-Ul5"/>
                         <outlet property="scrollView" destination="ghd-Th-muc" id="7OC-Ic-AWX"/>
                     </connections>
                 </viewController>

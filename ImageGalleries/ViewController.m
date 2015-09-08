@@ -10,6 +10,7 @@
 
 @interface ViewController ()
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
+@property (weak, nonatomic) IBOutlet UIPageControl *pageControl;
 
 @end
 
@@ -23,6 +24,16 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+-(void)scrollViewDidScroll:(UIScrollView *)scrollView {
+    
+    CGFloat pageWidth = scrollView.frame.size.width;
+    
+    int page = round(((scrollView.contentOffset.x) / pageWidth));
+    
+    self.pageControl.currentPage = page;
+    
 }
 
 @end
