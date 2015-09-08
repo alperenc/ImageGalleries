@@ -11,6 +11,7 @@
 
 @interface ViewController ()
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
+@property (weak, nonatomic) IBOutlet UIPageControl *pageControl;
 
 @end
 
@@ -44,6 +45,14 @@
         detailVC.image = (UIImage *)sender;
     }
 
+}
+
+-(void)scrollViewDidScroll:(UIScrollView *)scrollView {
+    CGFloat pageWidth = scrollView.frame.size.width;
+    
+    int page = round(scrollView.contentOffset.x / pageWidth);
+    
+    self.pageControl.currentPage = page;
 }
 
 @end

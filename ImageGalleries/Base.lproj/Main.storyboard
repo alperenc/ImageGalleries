@@ -61,6 +61,12 @@
                                     <outletCollection property="gestureRecognizers" destination="k8f-hg-eNF" appends="YES" id="fzz-i0-5C5"/>
                                 </connections>
                             </scrollView>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="fAs-RN-FUF">
+                                <rect key="frame" x="280" y="555" width="39" height="37"/>
+                                <animations/>
+                                <color key="pageIndicatorTintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="currentPageIndicatorTintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                            </pageControl>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -71,11 +77,14 @@
                             <constraint firstItem="DQN-yB-KK0" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" priority="750" id="DVy-rU-gje"/>
                             <constraint firstItem="3T1-1W-ha4" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" priority="750" id="Gak-U4-jFf"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="ghd-Th-muc" secondAttribute="bottom" id="Ktd-7w-Dxu"/>
+                            <constraint firstItem="fAs-RN-FUF" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Whg-TP-Wjd"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="fAs-RN-FUF" secondAttribute="bottom" constant="8" symbolic="YES" id="wVh-ny-5ba"/>
                             <constraint firstAttribute="trailing" secondItem="ghd-Th-muc" secondAttribute="trailing" id="xr2-cP-eab"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Hss-Jc-PqU"/>
                     <connections>
+                        <outlet property="pageControl" destination="fAs-RN-FUF" id="Usf-R3-Fcf"/>
                         <outlet property="scrollView" destination="ghd-Th-muc" id="7OC-Ic-AWX"/>
                         <segue destination="1HP-AY-JGC" kind="show" identifier="showImageDetail" id="ng9-Fq-uU0"/>
                     </connections>
