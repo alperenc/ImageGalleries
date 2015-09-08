@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "DetailViewController.h"
 
 @interface ViewController ()
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
@@ -23,6 +24,26 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (IBAction)tap:(UITapGestureRecognizer *)sender {
+    if (sender.state == UIGestureRecognizerStateRecognized) {
+        UIImageView *tappedView = (UIImageView *)[self.scrollView hitTest:[sender locationInView:self.scrollView] withEvent:nil];
+        
+        if ([tappedView isKindOfClass:[UIImageView class]]) {
+            UIImage *tappedImage = tappedView.image;
+            [self performSegueWithIdentifier:@"showImageDetail" sender:tappedImage];
+        }
+    }
+}
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([segue.identifier isEqualToString:@"showImageDetail"]) {
+        DetailViewController *detailVC = segue.destinationViewController;
+        
+        detailVC.image = (UIImage *)sender;
+    }
+
 }
 
 @end

@@ -20,6 +20,7 @@
     [super viewDidLoad];
     
     self.scrollView.zoomScale = 2.0;
+    self.imageView.image = self.image;
 }
 
 - (void)didReceiveMemoryWarning {
