@@ -19,7 +19,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.scrollView.zoomScale = 2.0;
+    self.scrollView.zoomScale = 1.0;
     self.imageView.image = self.image;
 }
 

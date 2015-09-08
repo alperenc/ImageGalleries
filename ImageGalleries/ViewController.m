@@ -38,6 +38,12 @@
     }
 }
 
+- (IBAction)changePage:(UIPageControl *)sender {
+    
+    [self.scrollView scrollRectToVisible:CGRectMake(self.scrollView.bounds.size.width * sender.currentPage, 0, self.scrollView.bounds.size.width, self.scrollView.bounds.size.height) animated:YES];
+    
+}
+
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if ([segue.identifier isEqualToString:@"showImageDetail"]) {
         DetailViewController *detailVC = segue.destinationViewController;

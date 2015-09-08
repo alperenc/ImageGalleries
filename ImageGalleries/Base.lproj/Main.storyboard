@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8187.4" systemVersion="15A279b" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="bdp-eZ-dg2">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8151.3"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -62,10 +63,16 @@
                                 </connections>
                             </scrollView>
                             <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="fAs-RN-FUF">
-                                <rect key="frame" x="280" y="555" width="39" height="37"/>
+                                <rect key="frame" x="20" y="548" width="560" height="44"/>
                                 <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="t66-Sc-L0b"/>
+                                </constraints>
                                 <color key="pageIndicatorTintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <color key="currentPageIndicatorTintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <action selector="changePage:" destination="BYZ-38-t0r" eventType="valueChanged" id="rB9-cv-R1S"/>
+                                </connections>
                             </pageControl>
                         </subviews>
                         <animations/>
@@ -76,8 +83,10 @@
                             <constraint firstItem="f9Z-rN-MR9" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" priority="750" id="BIA-yd-NPb"/>
                             <constraint firstItem="DQN-yB-KK0" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" priority="750" id="DVy-rU-gje"/>
                             <constraint firstItem="3T1-1W-ha4" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" priority="750" id="Gak-U4-jFf"/>
+                            <constraint firstItem="fAs-RN-FUF" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="JnN-12-f9w"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="ghd-Th-muc" secondAttribute="bottom" id="Ktd-7w-Dxu"/>
                             <constraint firstItem="fAs-RN-FUF" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Whg-TP-Wjd"/>
+                            <constraint firstItem="fAs-RN-FUF" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="v4A-EF-0Xg"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="fAs-RN-FUF" secondAttribute="bottom" constant="8" symbolic="YES" id="wVh-ny-5ba"/>
                             <constraint firstAttribute="trailing" secondItem="ghd-Th-muc" secondAttribute="trailing" id="xr2-cP-eab"/>
                         </constraints>
